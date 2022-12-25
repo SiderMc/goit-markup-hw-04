@@ -31,7 +31,10 @@ button {
   --second-color: #2e2f42;
   --third-color: #f4f4fd;
   --fourth-color: #e7e9fc;
+  --five-color: #8e8f99;
   --hover-color: #404bbf;
+  --hover-footer: #31d0aa;
+  --footer-color: rgba(255, 255, 255, 0.1);
 }
 
 /*=======================Global========================*/
@@ -78,6 +81,22 @@ body {
 .header-page-link:focus {
   color: var(--hover-color);
 }
+.social-icons-link:focus,
+.social-icons-link:hover {
+  background-color: var(--hover-color);
+}
+.customers-list-link:focus,
+.customers-list-link:hover {
+  border: 1px solid var(--hover-color);
+}
+.customers-list-link:hover .customers-icon,
+.customers-list-link :focus.customers-icon {
+  fill: var(--hover-color);
+}
+.footer-social-link:focus,
+.footer-social-link:hover {
+  background-color: var(--hover-footer);
+}
 /*========================================================*/
 /*==================Links==================================*/
 .navigation-list-link,
@@ -94,7 +113,9 @@ body {
 .header-page-list,
 .main-lists,
 .buttons-list,
-.service-list {
+.service-list,
+.social-icons,
+.customers-list {
   list-style: none;
 }
 .header-page-contacts {
@@ -184,6 +205,11 @@ body {
 .hero {
   text-align: center;
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/bghero.jpg);
 }
 .section-botton {
   margin-top: 48px;
@@ -199,42 +225,122 @@ body {
 .main-lists {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 .benefits-title {
   margin-bottom: 8px;
   text-align: left;
+}
+.benefits-list-item {
+  max-width: 264px;
+}
+.benefits-list-box {
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  margin-bottom: 8px;
 }
 /*=============================================*/
 /*==============PROJECTS=======================*/
 .projects {
   padding: 120px 0;
 }
+.projects-list-item {
+  background-image: linear-gradient(
+    0deg,
+    rgba(77, 90, 229, 0.1),
+    rgba(77, 90, 229, 0.1)
+  );
+}
 /*=============================================*/
 /*================TEAM=========================*/
 .team {
-  padding-top: 120px 0;
+  padding: 120px 0;
   background-color: var(--third-color);
 }
 .team-list-item {
   background-color: var(--background-color);
   border: 1px solid var(--fourth-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-list-box {
   padding: 32px 0;
 }
 .team-text {
   text-align: center;
+  padding-bottom: 8px;
 }
-
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.social-icons-link {
+  width: 40px;
+  height: 40px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icon {
+  fill: var(--third-color);
+}
+/*==============================================*/
+/*=============CUSTOMER=========================*/
+.customers {
+  padding: 130px 0 120px 0;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+.customers-list-item {
+}
+.customers-list-link {
+  display: block;
+  border: 1px solid var(--five-color);
+  border-radius: 4px;
+  padding: 15px 31px;
+}
+.customers-icon {
+  display: block;
+  fill: var(--five-color);
+}
 /*==============================================*/
 /*==============FOOTER============================*/
 .footer {
   padding: 100px 0;
 }
+.footer-block {
+  display: flex;
+}
 .footer-box {
   width: 264px;
   color: var(--third-color);
-  margin-top: 13px;
+  margin-right: 120px;
+}
+.footer-text {
+  margin-top: 16px;
+}
+.footer-icons-title {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--second-color-text);
+  margin-bottom: 16px;
+}
+.footer-social-link {
+  background-color: var(--footer-color);
+}
+.social-icons-footer {
+  gap: 16px;
 }
 /*================================================*/
 
@@ -256,6 +362,8 @@ body {
 }
 .service-list-item {
   border: 1px solid var(--fourth-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .service-box {
   padding: 32px 0 32px 16px;
